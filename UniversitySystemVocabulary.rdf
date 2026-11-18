@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://vse.cz/fis/4IZ441/university-system/vocabulary/"
-     xml:base="http://vse.cz/fis/4IZ441/university-system/vocabulary/"
+<rdf:RDF xmlns="http://vse.cz/fis/4IZ441/university-system/vocabulary//"
+     xml:base="http://vse.cz/fis/4IZ441/university-system/vocabulary//"
      xmlns:cc="http://web.resource.org/cc/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
@@ -14,7 +14,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:aiiso="http://purl.org/vocab/aiiso/schema#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary">
+    <owl:Ontology rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/">
         <owl:imports rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
     </owl:Ontology>
     
@@ -31,10 +31,10 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/containsCourse -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//containsCourse -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/containsCourse">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/isTaughtFor"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//containsCourse">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//isTaughtFor"/>
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
         <rdfs:range rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
         <rdfs:comment xml:lang="en">Relates a study programme to a course taught as its part.</rdfs:comment>
@@ -43,10 +43,10 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/containsDepartment -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//containsDepartment -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/containsDepartment">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/isPartOfFaculty"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//containsDepartment">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//isPartOfFaculty"/>
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Faculty"/>
         <rdfs:range rdf:resource="http://purl.org/vocab/aiiso/schema#Department"/>
         <rdfs:comment xml:lang="en">Relates a faculty to a department belonging to it.</rdfs:comment>
@@ -55,23 +55,23 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/employs -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//employs -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/employs">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/isEmployeeOf"/>
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/University"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Employee"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//employs">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//isEmployeeOf"/>
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//University"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Employee"/>
         <rdfs:comment xml:lang="en">Relates a university to an employee it employs.</rdfs:comment>
         <rdfs:label xml:lang="en">employs</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/enrolledIn -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//enrolledIn -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/enrolledIn">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/hasEnrolledStudent"/>
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Student"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//enrolledIn">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//hasEnrolledStudent"/>
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Student"/>
         <rdfs:range rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
         <rdfs:comment xml:lang="en">Relates a student to a course in which they are enrolled.</rdfs:comment>
         <rdfs:label xml:lang="en">enrolled in</rdfs:label>
@@ -79,58 +79,58 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/hasEnrolledStudent -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//hasEnrolledStudent -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/hasEnrolledStudent">
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//hasEnrolledStudent">
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Student"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Student"/>
         <rdfs:comment xml:lang="en">Relates a course to a student enrolled in it.</rdfs:comment>
         <rdfs:label xml:lang="en">has enrolled student</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/hasMember -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//hasMember -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/hasMember">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/isMemberOf"/>
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/University"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/UniversityMember"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//hasMember">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//isMemberOf"/>
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//University"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//UniversityMember"/>
         <rdfs:comment xml:lang="en">Relates a university to one of its members.</rdfs:comment>
         <rdfs:label xml:lang="en">has member</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/hasStudent -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//hasStudent -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/hasStudent">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/studies"/>
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/University"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Student"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//hasStudent">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//studies"/>
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//University"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Student"/>
         <rdfs:comment xml:lang="en">Relates a university to a student studying there.</rdfs:comment>
         <rdfs:label xml:lang="en">has student</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/hasTeacher -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//hasTeacher -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/hasTeacher">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/registeredUnder"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//hasTeacher">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//registeredUnder"/>
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Department"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Teacher"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Teacher"/>
         <rdfs:comment xml:lang="en">Relates a department to a teacher registered under it.</rdfs:comment>
         <rdfs:label xml:lang="en">has teacher</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/hostsCourse -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//hostsCourse -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/hostsCourse">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/takesPlaceIn"/>
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Classroom"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//hostsCourse">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//takesPlaceIn"/>
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Classroom"/>
         <rdfs:range rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
         <rdfs:comment xml:lang="en">Relates a classroom to a course taught in it.</rdfs:comment>
         <rdfs:label xml:lang="en">hosts course</rdfs:label>
@@ -138,43 +138,43 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/isEmployeeOf -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//isEmployeeOf -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/isEmployeeOf">
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Employee"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/University"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//isEmployeeOf">
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Employee"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//University"/>
         <rdfs:comment xml:lang="en">Relates an employee to the university that employs them.</rdfs:comment>
         <rdfs:label xml:lang="en">is employee of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/isMemberOf -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//isMemberOf -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/isMemberOf">
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/UniversityMember"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/University"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//isMemberOf">
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//UniversityMember"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//University"/>
         <rdfs:comment xml:lang="en">Relates a university member to the university they participate in.</rdfs:comment>
         <rdfs:label xml:lang="en">is member of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/isOfferedBy -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//isOfferedBy -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/isOfferedBy">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/offersProgramme"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//isOfferedBy">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//offersProgramme"/>
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/University"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//University"/>
         <rdfs:comment xml:lang="en">Relates a study programme to the university offering it.</rdfs:comment>
         <rdfs:label xml:lang="en">is offered by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/isPartOfFaculty -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//isPartOfFaculty -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/isPartOfFaculty">
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//isPartOfFaculty">
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Department"/>
         <rdfs:range rdf:resource="http://purl.org/vocab/aiiso/schema#Faculty"/>
         <rdfs:comment xml:lang="en">Relates a department to the faculty it belongs to.</rdfs:comment>
@@ -183,21 +183,21 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/isTaughtBy -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//isTaughtBy -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/isTaughtBy">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/teaches"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//isTaughtBy">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//teaches"/>
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Teacher"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Teacher"/>
         <rdfs:comment xml:lang="en">Relates a course to a teacher who teaches it.</rdfs:comment>
         <rdfs:label xml:lang="en">is taught by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/isTaughtFor -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//isTaughtFor -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/isTaughtFor">
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//isTaughtFor">
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
         <rdfs:range rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
         <rdfs:comment xml:lang="en">Relates a course to the study programme it is taught as a part of.</rdfs:comment>
@@ -206,23 +206,23 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/issuedEvaluation -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//issuedEvaluation -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/issuedEvaluation">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/wasIssuedBy"/>
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Teacher"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/CourseEvaluation"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//issuedEvaluation">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//wasIssuedBy"/>
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Teacher"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//CourseEvaluation"/>
         <rdfs:comment xml:lang="en">Relates a teacher to a course evaluation they issued.</rdfs:comment>
         <rdfs:label xml:lang="en">issued evaluation</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/issuedForCourse -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//issuedForCourse -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/issuedForCourse">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/registeredEvaluation"/>
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/CourseEvaluation"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//issuedForCourse">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//registeredEvaluation"/>
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//CourseEvaluation"/>
         <rdfs:range rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
         <rdfs:comment xml:lang="en">Relates a course evaluation to the course it evaluates.</rdfs:comment>
         <rdfs:label xml:lang="en">issued for course</rdfs:label>
@@ -230,10 +230,10 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/offersProgramme -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//offersProgramme -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/offersProgramme">
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/University"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//offersProgramme">
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//University"/>
         <rdfs:range rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
         <rdfs:comment xml:lang="en">Relates a university to a study programme it offers.</rdfs:comment>
         <rdfs:label xml:lang="en">offers programme</rdfs:label>
@@ -241,22 +241,22 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/operatedBy -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//operatedBy -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/operatedBy">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/operatesFaculty"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//operatedBy">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//operatesFaculty"/>
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Faculty"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/University"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//University"/>
         <rdfs:comment xml:lang="en">Relates a faculty to the university that operates it.</rdfs:comment>
         <rdfs:label xml:lang="en">operated by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/operatesFaculty -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//operatesFaculty -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/operatesFaculty">
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/University"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//operatesFaculty">
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//University"/>
         <rdfs:range rdf:resource="http://purl.org/vocab/aiiso/schema#Faculty"/>
         <rdfs:comment xml:lang="en">Relates a university to a faculty it operates.</rdfs:comment>
         <rdfs:label xml:lang="en">operates faculty</rdfs:label>
@@ -264,33 +264,33 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/receivedEvaluation -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//receivedEvaluation -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/receivedEvaluation">
-        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/wasGivenTo"/>
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Student"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/CourseEvaluation"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//receivedEvaluation">
+        <owl:inverseOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//wasGivenTo"/>
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Student"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//CourseEvaluation"/>
         <rdfs:comment xml:lang="en">Relates a student to a course evaluation they received.</rdfs:comment>
         <rdfs:label xml:lang="en">received evaluation</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/registeredEvaluation -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//registeredEvaluation -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/registeredEvaluation">
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//registeredEvaluation">
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/CourseEvaluation"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//CourseEvaluation"/>
         <rdfs:comment xml:lang="en">Relates a course to an evaluation issued for it.</rdfs:comment>
         <rdfs:label xml:lang="en">registered evaluation</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/registeredUnder -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//registeredUnder -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/registeredUnder">
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Teacher"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//registeredUnder">
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Teacher"/>
         <rdfs:range rdf:resource="http://purl.org/vocab/aiiso/schema#Department"/>
         <rdfs:comment xml:lang="en">Relates a teacher to the department under which they are registered.</rdfs:comment>
         <rdfs:label xml:lang="en">registered under</rdfs:label>
@@ -298,32 +298,32 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/studies -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//studies -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/studies">
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Student"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/University"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//studies">
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Student"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//University"/>
         <rdfs:comment xml:lang="en">Relates a student to the university at which they study.</rdfs:comment>
         <rdfs:label xml:lang="en">studies</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/takesPlaceIn -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//takesPlaceIn -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/takesPlaceIn">
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//takesPlaceIn">
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Classroom"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Classroom"/>
         <rdfs:comment xml:lang="en">Relates a course to the classroom where it is taught.</rdfs:comment>
         <rdfs:label xml:lang="en">takes place in</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/teaches -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//teaches -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/teaches">
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Teacher"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//teaches">
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Teacher"/>
         <rdfs:range rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
         <rdfs:comment xml:lang="en">Relates a teacher to a course they teach.</rdfs:comment>
         <rdfs:label xml:lang="en">teaches</rdfs:label>
@@ -331,22 +331,22 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/wasGivenTo -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//wasGivenTo -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/wasGivenTo">
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/CourseEvaluation"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Student"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//wasGivenTo">
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//CourseEvaluation"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Student"/>
         <rdfs:comment xml:lang="en">Relates a course evaluation to the student it was given to.</rdfs:comment>
         <rdfs:label xml:lang="en">was given to</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/wasIssuedBy -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//wasIssuedBy -->
 
-    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/wasIssuedBy">
-        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/CourseEvaluation"/>
-        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Teacher"/>
+    <owl:ObjectProperty rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//wasIssuedBy">
+        <rdfs:domain rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//CourseEvaluation"/>
+        <rdfs:range rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Teacher"/>
         <rdfs:comment xml:lang="en">Relates a course evaluation to the teacher who issued it.</rdfs:comment>
         <rdfs:label xml:lang="en">was issued by</rdfs:label>
     </owl:ObjectProperty>
@@ -367,7 +367,7 @@
     <!-- http://purl.org/vocab/aiiso/schema#Course -->
 
     <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#Course">
-        <owl:disjointWith rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/CourseEvaluation"/>
+        <owl:disjointWith rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//CourseEvaluation"/>
     </owl:Class>
     
 
@@ -404,58 +404,58 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/Classroom -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//Classroom -->
 
-    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/Classroom">
-        <owl:disjointWith rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/UniversityMember"/>
+    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//Classroom">
+        <owl:disjointWith rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//UniversityMember"/>
         <rdfs:comment xml:lang="en">A physical room within the university where educational activities and lectures take place.</rdfs:comment>
         <rdfs:label xml:lang="en">Classroom</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/CourseEvaluation -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//CourseEvaluation -->
 
-    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/CourseEvaluation">
+    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//CourseEvaluation">
         <rdfs:comment xml:lang="en">Feedback provided by a student regarding the quality and content of a specific course.</rdfs:comment>
         <rdfs:label xml:lang="en">Course Evaluation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/Employee -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//Employee -->
 
-    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/Employee">
-        <rdfs:subClassOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/UniversityMember"/>
+    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//Employee">
+        <rdfs:subClassOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//UniversityMember"/>
         <rdfs:comment xml:lang="en">A person who is hired to provide services to the university on a regular basis.</rdfs:comment>
         <rdfs:label xml:lang="en">Employee</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/Student -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//Student -->
 
-    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/Student">
-        <rdfs:subClassOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/UniversityMember"/>
+    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//Student">
+        <rdfs:subClassOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//UniversityMember"/>
         <rdfs:comment xml:lang="en">A person officially enrolled in a study programme or courses at the university.</rdfs:comment>
         <rdfs:label xml:lang="en">Student</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/Teacher -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//Teacher -->
 
-    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/Teacher">
-        <rdfs:subClassOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary/Employee"/>
+    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//Teacher">
+        <rdfs:subClassOf rdf:resource="http://vse.cz/fis/4IZ441/university-system/vocabulary//Employee"/>
         <rdfs:comment xml:lang="en">An academic employee responsible for instructing courses and educating students.</rdfs:comment>
         <rdfs:label xml:lang="en">Teacher</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/University -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//University -->
 
-    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/University">
+    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//University">
         <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#Institution"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#School"/>
         <rdfs:comment xml:lang="en">An institution of higher education and research that grants academic degrees.</rdfs:comment>
@@ -464,9 +464,9 @@
     
 
 
-    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary/UniversityMember -->
+    <!-- http://vse.cz/fis/4IZ441/university-system/vocabulary//UniversityMember -->
 
-    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary/UniversityMember">
+    <owl:Class rdf:about="http://vse.cz/fis/4IZ441/university-system/vocabulary//UniversityMember">
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:comment xml:lang="en">A generic class representing any person affiliated with the university, encompassing both students and staff.</rdfs:comment>
         <rdfs:label xml:lang="en">University Member</rdfs:label>
