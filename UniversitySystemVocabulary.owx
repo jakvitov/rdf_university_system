@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://vse.cz/fis/4IZ441/university-system"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://vse.cz/fis/4IZ441/university-system">
+    <Prefix name="" IRI="http://vse.cz/fis/4IZ441/university-system/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="aiiso" IRI="http://purl.org/vocab/aiiso/schema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Import>http://purl.org/vocab/aiiso/schema#</Import>
+    <!-- Declarations: imported AIISO / FOAF terms (reused) -->
+    <Declaration><Class abbreviatedIRI="aiiso:Institution"/></Declaration>
+    <Declaration><Class abbreviatedIRI="aiiso:School"/></Declaration>
+    <Declaration><Class abbreviatedIRI="aiiso:Faculty"/></Declaration>
+    <Declaration><Class abbreviatedIRI="aiiso:Department"/></Declaration>
+    <Declaration><Class abbreviatedIRI="aiiso:Programme"/></Declaration>
+    <Declaration><Class abbreviatedIRI="aiiso:Course"/></Declaration>
+    <Declaration><Class abbreviatedIRI="foaf:Person"/></Declaration>
+    <!-- Declarations: classes -->
+    <Declaration><Class abbreviatedIRI=":University"/></Declaration>
+    <Declaration><Class abbreviatedIRI=":UniversityMember"/></Declaration>
+    <Declaration><Class abbreviatedIRI=":Student"/></Declaration>
+    <Declaration><Class abbreviatedIRI=":Employee"/></Declaration>
+    <Declaration><Class abbreviatedIRI=":Teacher"/></Declaration>
+    <Declaration><Class abbreviatedIRI=":Classroom"/></Declaration>
+    <Declaration><Class abbreviatedIRI=":CourseEvaluation"/></Declaration>
+    <!-- Declarations: object properties -->
+    <Declaration><ObjectProperty abbreviatedIRI=":studies"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":hasStudent"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":employs"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":isEmployeeOf"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":isMemberOf"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":hasMember"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":enrolledIn"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":hasEnrolledStudent"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":takesPlaceIn"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":hostsCourse"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":teaches"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":isTaughtBy"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":registeredUnder"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":hasTeacher"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":isTaughtFor"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":containsCourse"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":offersProgramme"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":isOfferedBy"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":isPartOfFaculty"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":containsDepartment"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":operatedBy"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":operatesFaculty"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":receivedEvaluation"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":wasGivenTo"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":issuedEvaluation"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":wasIssuedBy"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":issuedForCourse"/></Declaration>
+    <Declaration><ObjectProperty abbreviatedIRI=":registeredEvaluation"/></Declaration>
+    <!-- Class hierarchy -->
+    <SubClassOf><Class abbreviatedIRI=":University"/><Class abbreviatedIRI="aiiso:Institution"/></SubClassOf>
+    <SubClassOf><Class abbreviatedIRI=":University"/><Class abbreviatedIRI="aiiso:School"/></SubClassOf>
+    <SubClassOf><Class abbreviatedIRI=":UniversityMember"/><Class abbreviatedIRI="foaf:Person"/></SubClassOf>
+    <SubClassOf><Class abbreviatedIRI=":Student"/><Class abbreviatedIRI=":UniversityMember"/></SubClassOf>
+    <SubClassOf><Class abbreviatedIRI=":Employee"/><Class abbreviatedIRI=":UniversityMember"/></SubClassOf>
+    <SubClassOf><Class abbreviatedIRI=":Teacher"/><Class abbreviatedIRI=":Employee"/></SubClassOf>
+    <!-- Disjointness -->
+    <DisjointClasses><Class abbreviatedIRI=":UniversityMember"/><Class abbreviatedIRI=":Classroom"/></DisjointClasses>
+    <DisjointClasses><Class abbreviatedIRI="aiiso:Course"/><Class abbreviatedIRI=":CourseEvaluation"/></DisjointClasses>
+    <DisjointClasses><Class abbreviatedIRI="foaf:Person"/><Class abbreviatedIRI="aiiso:Institution"/></DisjointClasses>
+    <!-- Object property domains, ranges, inverses -->
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":studies"/><ObjectProperty abbreviatedIRI=":hasStudent"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":studies"/><Class abbreviatedIRI=":Student"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":studies"/><Class abbreviatedIRI=":University"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":hasStudent"/><Class abbreviatedIRI=":University"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":hasStudent"/><Class abbreviatedIRI=":Student"/></ObjectPropertyRange>
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":employs"/><ObjectProperty abbreviatedIRI=":isEmployeeOf"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":employs"/><Class abbreviatedIRI=":University"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":employs"/><Class abbreviatedIRI=":Employee"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":isEmployeeOf"/><Class abbreviatedIRI=":Employee"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":isEmployeeOf"/><Class abbreviatedIRI=":University"/></ObjectPropertyRange>
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":isMemberOf"/><ObjectProperty abbreviatedIRI=":hasMember"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":isMemberOf"/><Class abbreviatedIRI=":UniversityMember"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":isMemberOf"/><Class abbreviatedIRI=":University"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":hasMember"/><Class abbreviatedIRI=":University"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":hasMember"/><Class abbreviatedIRI=":UniversityMember"/></ObjectPropertyRange>
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":enrolledIn"/><ObjectProperty abbreviatedIRI=":hasEnrolledStudent"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":enrolledIn"/><Class abbreviatedIRI=":Student"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":enrolledIn"/><Class abbreviatedIRI="aiiso:Course"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":hasEnrolledStudent"/><Class abbreviatedIRI="aiiso:Course"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":hasEnrolledStudent"/><Class abbreviatedIRI=":Student"/></ObjectPropertyRange>
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":takesPlaceIn"/><ObjectProperty abbreviatedIRI=":hostsCourse"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":takesPlaceIn"/><Class abbreviatedIRI="aiiso:Course"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":takesPlaceIn"/><Class abbreviatedIRI=":Classroom"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":hostsCourse"/><Class abbreviatedIRI=":Classroom"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":hostsCourse"/><Class abbreviatedIRI="aiiso:Course"/></ObjectPropertyRange>
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":teaches"/><ObjectProperty abbreviatedIRI=":isTaughtBy"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":teaches"/><Class abbreviatedIRI=":Teacher"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":teaches"/><Class abbreviatedIRI="aiiso:Course"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":isTaughtBy"/><Class abbreviatedIRI="aiiso:Course"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":isTaughtBy"/><Class abbreviatedIRI=":Teacher"/></ObjectPropertyRange>
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":registeredUnder"/><ObjectProperty abbreviatedIRI=":hasTeacher"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":registeredUnder"/><Class abbreviatedIRI=":Teacher"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":registeredUnder"/><Class abbreviatedIRI="aiiso:Department"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":hasTeacher"/><Class abbreviatedIRI="aiiso:Department"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":hasTeacher"/><Class abbreviatedIRI=":Teacher"/></ObjectPropertyRange>
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":isTaughtFor"/><ObjectProperty abbreviatedIRI=":containsCourse"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":isTaughtFor"/><Class abbreviatedIRI="aiiso:Course"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":isTaughtFor"/><Class abbreviatedIRI="aiiso:Programme"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":containsCourse"/><Class abbreviatedIRI="aiiso:Programme"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":containsCourse"/><Class abbreviatedIRI="aiiso:Course"/></ObjectPropertyRange>
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":offersProgramme"/><ObjectProperty abbreviatedIRI=":isOfferedBy"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":offersProgramme"/><Class abbreviatedIRI=":University"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":offersProgramme"/><Class abbreviatedIRI="aiiso:Programme"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":isOfferedBy"/><Class abbreviatedIRI="aiiso:Programme"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":isOfferedBy"/><Class abbreviatedIRI=":University"/></ObjectPropertyRange>
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":isPartOfFaculty"/><ObjectProperty abbreviatedIRI=":containsDepartment"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":isPartOfFaculty"/><Class abbreviatedIRI="aiiso:Department"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":isPartOfFaculty"/><Class abbreviatedIRI="aiiso:Faculty"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":containsDepartment"/><Class abbreviatedIRI="aiiso:Faculty"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":containsDepartment"/><Class abbreviatedIRI="aiiso:Department"/></ObjectPropertyRange>
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":operatedBy"/><ObjectProperty abbreviatedIRI=":operatesFaculty"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":operatedBy"/><Class abbreviatedIRI="aiiso:Faculty"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":operatedBy"/><Class abbreviatedIRI=":University"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":operatesFaculty"/><Class abbreviatedIRI=":University"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":operatesFaculty"/><Class abbreviatedIRI="aiiso:Faculty"/></ObjectPropertyRange>
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":receivedEvaluation"/><ObjectProperty abbreviatedIRI=":wasGivenTo"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":receivedEvaluation"/><Class abbreviatedIRI=":Student"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":receivedEvaluation"/><Class abbreviatedIRI=":CourseEvaluation"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":wasGivenTo"/><Class abbreviatedIRI=":CourseEvaluation"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":wasGivenTo"/><Class abbreviatedIRI=":Student"/></ObjectPropertyRange>
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":issuedEvaluation"/><ObjectProperty abbreviatedIRI=":wasIssuedBy"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":issuedEvaluation"/><Class abbreviatedIRI=":Teacher"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":issuedEvaluation"/><Class abbreviatedIRI=":CourseEvaluation"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":wasIssuedBy"/><Class abbreviatedIRI=":CourseEvaluation"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":wasIssuedBy"/><Class abbreviatedIRI=":Teacher"/></ObjectPropertyRange>
+    <InverseObjectProperties><ObjectProperty abbreviatedIRI=":issuedForCourse"/><ObjectProperty abbreviatedIRI=":registeredEvaluation"/></InverseObjectProperties>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":issuedForCourse"/><Class abbreviatedIRI=":CourseEvaluation"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":issuedForCourse"/><Class abbreviatedIRI="aiiso:Course"/></ObjectPropertyRange>
+    <ObjectPropertyDomain><ObjectProperty abbreviatedIRI=":registeredEvaluation"/><Class abbreviatedIRI="aiiso:Course"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty abbreviatedIRI=":registeredEvaluation"/><Class abbreviatedIRI=":CourseEvaluation"/></ObjectPropertyRange>
+    <!-- Annotations -->
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:University</AbbreviatedIRI><Literal xml:lang="en">University</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:University</AbbreviatedIRI><Literal xml:lang="en">An institution of higher education and research that grants academic degrees.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:UniversityMember</AbbreviatedIRI><Literal xml:lang="en">University Member</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:UniversityMember</AbbreviatedIRI><Literal xml:lang="en">A generic class representing any person affiliated with the university, encompassing both students and staff.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:Student</AbbreviatedIRI><Literal xml:lang="en">Student</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:Student</AbbreviatedIRI><Literal xml:lang="en">A person officially enrolled in a study programme or courses at the university.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:Employee</AbbreviatedIRI><Literal xml:lang="en">Employee</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:Employee</AbbreviatedIRI><Literal xml:lang="en">A person who is hired to provide services to the university on a regular basis.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:Teacher</AbbreviatedIRI><Literal xml:lang="en">Teacher</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:Teacher</AbbreviatedIRI><Literal xml:lang="en">An academic employee responsible for instructing courses and educating students.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:Classroom</AbbreviatedIRI><Literal xml:lang="en">Classroom</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:Classroom</AbbreviatedIRI><Literal xml:lang="en">A physical room within the university where educational activities and lectures take place.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:CourseEvaluation</AbbreviatedIRI><Literal xml:lang="en">Course Evaluation</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:CourseEvaluation</AbbreviatedIRI><Literal xml:lang="en">Feedback provided by a student regarding the quality and content of a specific course.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:studies</AbbreviatedIRI><Literal xml:lang="en">studies</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:studies</AbbreviatedIRI><Literal xml:lang="en">Relates a student to the university at which they study.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:hasStudent</AbbreviatedIRI><Literal xml:lang="en">has student</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:hasStudent</AbbreviatedIRI><Literal xml:lang="en">Relates a university to a student studying there.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:employs</AbbreviatedIRI><Literal xml:lang="en">employs</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:employs</AbbreviatedIRI><Literal xml:lang="en">Relates a university to an employee it employs.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:isEmployeeOf</AbbreviatedIRI><Literal xml:lang="en">is employee of</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:isEmployeeOf</AbbreviatedIRI><Literal xml:lang="en">Relates an employee to the university that employs them.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:isMemberOf</AbbreviatedIRI><Literal xml:lang="en">is member of</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:isMemberOf</AbbreviatedIRI><Literal xml:lang="en">Relates a university member to the university they participate in.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:hasMember</AbbreviatedIRI><Literal xml:lang="en">has member</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:hasMember</AbbreviatedIRI><Literal xml:lang="en">Relates a university to one of its members.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:enrolledIn</AbbreviatedIRI><Literal xml:lang="en">enrolled in</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:enrolledIn</AbbreviatedIRI><Literal xml:lang="en">Relates a student to a course in which they are enrolled.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:hasEnrolledStudent</AbbreviatedIRI><Literal xml:lang="en">has enrolled student</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:hasEnrolledStudent</AbbreviatedIRI><Literal xml:lang="en">Relates a course to a student enrolled in it.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:takesPlaceIn</AbbreviatedIRI><Literal xml:lang="en">takes place in</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:takesPlaceIn</AbbreviatedIRI><Literal xml:lang="en">Relates a course to the classroom where it is taught.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:hostsCourse</AbbreviatedIRI><Literal xml:lang="en">hosts course</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:hostsCourse</AbbreviatedIRI><Literal xml:lang="en">Relates a classroom to a course taught in it.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:teaches</AbbreviatedIRI><Literal xml:lang="en">teaches</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:teaches</AbbreviatedIRI><Literal xml:lang="en">Relates a teacher to a course they teach.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:isTaughtBy</AbbreviatedIRI><Literal xml:lang="en">is taught by</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:isTaughtBy</AbbreviatedIRI><Literal xml:lang="en">Relates a course to a teacher who teaches it.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:registeredUnder</AbbreviatedIRI><Literal xml:lang="en">registered under</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:registeredUnder</AbbreviatedIRI><Literal xml:lang="en">Relates a teacher to the department under which they are registered.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:hasTeacher</AbbreviatedIRI><Literal xml:lang="en">has teacher</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:hasTeacher</AbbreviatedIRI><Literal xml:lang="en">Relates a department to a teacher registered under it.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:isTaughtFor</AbbreviatedIRI><Literal xml:lang="en">is taught for</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:isTaughtFor</AbbreviatedIRI><Literal xml:lang="en">Relates a course to the study programme it is taught as a part of.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:containsCourse</AbbreviatedIRI><Literal xml:lang="en">contains course</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:containsCourse</AbbreviatedIRI><Literal xml:lang="en">Relates a study programme to a course taught as its part.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:offersProgramme</AbbreviatedIRI><Literal xml:lang="en">offers programme</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:offersProgramme</AbbreviatedIRI><Literal xml:lang="en">Relates a university to a study programme it offers.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:isOfferedBy</AbbreviatedIRI><Literal xml:lang="en">is offered by</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:isOfferedBy</AbbreviatedIRI><Literal xml:lang="en">Relates a study programme to the university offering it.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:isPartOfFaculty</AbbreviatedIRI><Literal xml:lang="en">is part of faculty</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:isPartOfFaculty</AbbreviatedIRI><Literal xml:lang="en">Relates a department to the faculty it belongs to.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:containsDepartment</AbbreviatedIRI><Literal xml:lang="en">contains department</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:containsDepartment</AbbreviatedIRI><Literal xml:lang="en">Relates a faculty to a department belonging to it.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:operatedBy</AbbreviatedIRI><Literal xml:lang="en">operated by</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:operatedBy</AbbreviatedIRI><Literal xml:lang="en">Relates a faculty to the university that operates it.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:operatesFaculty</AbbreviatedIRI><Literal xml:lang="en">operates faculty</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:operatesFaculty</AbbreviatedIRI><Literal xml:lang="en">Relates a university to a faculty it operates.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:receivedEvaluation</AbbreviatedIRI><Literal xml:lang="en">received evaluation</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:receivedEvaluation</AbbreviatedIRI><Literal xml:lang="en">Relates a student to a course evaluation they received.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:wasGivenTo</AbbreviatedIRI><Literal xml:lang="en">was given to</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:wasGivenTo</AbbreviatedIRI><Literal xml:lang="en">Relates a course evaluation to the student it was given to.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:issuedEvaluation</AbbreviatedIRI><Literal xml:lang="en">issued evaluation</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:issuedEvaluation</AbbreviatedIRI><Literal xml:lang="en">Relates a teacher to a course evaluation they issued.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:wasIssuedBy</AbbreviatedIRI><Literal xml:lang="en">was issued by</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:wasIssuedBy</AbbreviatedIRI><Literal xml:lang="en">Relates a course evaluation to the teacher who issued it.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:issuedForCourse</AbbreviatedIRI><Literal xml:lang="en">issued for course</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:issuedForCourse</AbbreviatedIRI><Literal xml:lang="en">Relates a course evaluation to the course it evaluates.</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><AbbreviatedIRI>:registeredEvaluation</AbbreviatedIRI><Literal xml:lang="en">registered evaluation</Literal></AnnotationAssertion>
+    <AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><AbbreviatedIRI>:registeredEvaluation</AbbreviatedIRI><Literal xml:lang="en">Relates a course to an evaluation issued for it.</Literal></AnnotationAssertion>
+</Ontology>
